@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# INHA UMC
 
-## Getting Started
+인하대학교 UMC(University MakeUs Challenge) 10기 공식 홈페이지
 
-First, run the development server:
+## 기술 스택
+
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Styling**: CSS Variables + Inline Styles
+- **Font**: Pretendard, DM Mono
+
+## 시작하기
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) 에서 확인
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 프로젝트 구조
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Parts.tsx
+│   ├── Events.tsx
+│   ├── Apply.tsx
+│   └── Footer.tsx
+├── hooks/
+│   ├── useReveal.ts
+│   └── useTyping.ts
+└── lib/
+    └── utils.ts
+```
 
-## Learn More
+## 페이지 구성
 
-To learn more about Next.js, take a look at the following resources:
+| 섹션 | 설명 |
+|------|------|
+| Hero | 메인 타이틀 + 타이핑 이펙트 |
+| About | 동아리 소개 + 통계 |
+| Parts | 7개 파트 소개 |
+| Events | 최근 활동 카드 |
+| Apply | 지원 안내 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 모집 상태 변경
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+`src/app/page.tsx`의 `RECRUITING` 값을 수정
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```ts
+const RECRUITING = true;  // 모집 중
+const RECRUITING = false; // 모집 준비 중
+```
