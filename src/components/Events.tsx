@@ -16,11 +16,11 @@ export default function Events() {
     <section id="events" ref={sectionRef}
       style={{ position: 'relative', zIndex: 2, padding: 'clamp(72px,10vw,120px) clamp(16px,4vw,56px)' }}>
 
-      <div style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 16, opacity: .7 }}>03 — EVENTS</div>
+      <div style={{ fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 16, opacity: .7 }}>03 — EVENTS</div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 40, flexWrap: 'wrap', gap: 16 }}>
         <h2 style={{ fontSize: 'clamp(26px,3.5vw,38px)', fontWeight: 800, letterSpacing: '-0.025em', color: '#fff', lineHeight: 1.2 }}>최근 활동</h2>
-        <a href="#" style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--cyan)', textDecoration: 'none', letterSpacing: '0.06em', opacity: .7, transition: 'opacity .2s,transform .2s' }}
+        <a href="#" style={{ fontFamily: 'var(--sans)', fontSize: 11, color: 'var(--cyan)', textDecoration: 'none', letterSpacing: '0.06em', opacity: .7, transition: 'opacity .2s,transform .2s' }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.opacity = '1'; (e.currentTarget as HTMLElement).style.transform = 'translateX(4px)'; }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.opacity = '.7'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
         >전체 보기 →</a>
@@ -48,14 +48,14 @@ export default function Events() {
               <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 2, background: ev.color, opacity: .8 }} />
               <div style={{ position: 'absolute', top: 0, right: 0, left: 0, height: '100%', background: `radial-gradient(ellipse at top left,rgba(${rgb},.04) 0%,transparent 60%)`, pointerEvents: 'none' }} />
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: 9, fontWeight: 500, color: ev.color, letterSpacing: '0.1em', background: `rgba(${rgb},.1)`, borderRadius: 3, padding: '3px 8px' }}>{ev.tag}</span>
-                <span style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--dim)', letterSpacing: '0.04em' }}>{ev.date}</span>
+                <span style={{ fontFamily: 'var(--sans)', fontSize: 9, fontWeight: 500, color: ev.color, letterSpacing: '0.1em', background: `rgba(${rgb},.1)`, borderRadius: 3, padding: '3px 8px' }}>{ev.tag}</span>
+                <span style={{ fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--dim)', letterSpacing: '0.04em' }}>{ev.date}</span>
               </div>
               <div>
                 <h3 style={{ fontWeight: 700, fontSize: 16, color: '#fff', marginBottom: 8, lineHeight: 1.3, letterSpacing: '-0.015em' }}>{ev.title}</h3>
                 <p style={{ fontSize: 13, color: 'var(--mid)', lineHeight: 1.7 }}>{ev.desc}</p>
               </div>
-              <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--cyan)', opacity: .6, letterSpacing: '0.04em' }}>자세히 보기 →</div>
+              <div style={{ fontFamily: 'var(--sans)', fontSize: 11, color: 'var(--cyan)', opacity: .6, letterSpacing: '0.04em' }}>자세히 보기 →</div>
             </div>
           );
         })}

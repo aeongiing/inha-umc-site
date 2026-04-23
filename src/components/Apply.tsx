@@ -28,7 +28,7 @@ export default function Apply({ recruiting }: ApplyProps) {
             alignItems: 'center', textAlign: 'center', gap: 20,
             animation: visible ? 'pop-up .8s .1s both' : 'none',
           }}>
-            <div style={{ fontFamily: 'var(--mono)', fontSize: 10, color: recruiting ? 'var(--cyan)' : 'var(--mid)', letterSpacing: '0.14em', opacity: .8 }}>
+            <div style={{ fontFamily: 'var(--sans)', fontSize: 10, color: recruiting ? 'var(--cyan)' : 'var(--mid)', letterSpacing: '0.14em', opacity: .8 }}>
               {recruiting ? '10기 모집 중 · 지금 바로 지원하세요' : '모집 준비 중 · 일정을 기다려 주세요'}
             </div>
             <h2 style={{ fontSize: 'clamp(28px,4.5vw,56px)', fontWeight: 900, letterSpacing: '-0.03em', color: '#fff', lineHeight: 1.05 }}>같이<br />만들어볼까요?</h2>
@@ -38,17 +38,17 @@ export default function Apply({ recruiting }: ApplyProps) {
               {recruiting ? (
                 <button className="cta-pulse"
                   onClick={() => goTo('apply')}
-                  style={{ fontFamily: 'var(--mono)', fontSize: 13, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '14px 36px', borderRadius: 8, border: 'none', cursor: 'pointer', transition: 'all .2s', boxShadow: '0 0 28px rgba(0,175,236,0.3)' }}
+                  style={{ fontFamily: 'var(--sans)', fontSize: 13, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '14px 36px', borderRadius: 8, border: 'none', cursor: 'pointer', transition: 'all .2s', boxShadow: '0 0 28px rgba(0,175,236,0.3)' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 56px rgba(0,175,236,0.6)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 28px rgba(0,175,236,0.3)'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
                 >10기 모집안내</button>
               ) : (
-                <button style={{ fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--mid)', padding: '14px 36px', borderRadius: 8, border: '1px dashed rgba(255,255,255,0.12)', background: 'transparent', cursor: 'not-allowed', opacity: .7 }}>
+                <button style={{ fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--mid)', padding: '14px 36px', borderRadius: 8, border: '1px dashed rgba(255,255,255,0.12)', background: 'transparent', cursor: 'not-allowed', opacity: .7 }}>
                   모집 일정 공개 예정
                 </button>
               )}
               <button
-                style={{ fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--mid)', padding: '14px 36px', borderRadius: 8, border: '1px solid var(--line2)', background: 'transparent', cursor: 'pointer', transition: 'all .2s' }}
+                style={{ fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--mid)', padding: '14px 36px', borderRadius: 8, border: '1px solid var(--line2)', background: 'transparent', cursor: 'pointer', transition: 'all .2s' }}
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--text)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--mid)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
               >FAQ 보기</button>
