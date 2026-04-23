@@ -26,11 +26,11 @@ export default function Parts() {
     <section id="parts" ref={sectionRef}
       style={{ position: 'relative', zIndex: 2, padding: 'clamp(72px,10vw,120px) clamp(16px,4vw,56px)' }}>
 
-      <div style={{ animation: visible ? 'slide-left .6s both' : 'none', fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 16, opacity: .7 }}>02 — PARTS</div>
+      <div style={{ animation: visible ? 'slide-left .6s both' : 'none', fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 16, opacity: .7 }}>02 — PARTS</div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: 16, marginBottom: 40, animation: visible ? 'scan-in .7s .1s both' : 'none' }}>
         <h2 style={{ fontSize: 'clamp(26px,3.5vw,38px)', fontWeight: 800, letterSpacing: '-0.025em', color: '#fff', lineHeight: 1.2 }}>7가지 파트</h2>
-        <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--mid)', minHeight: 20, transition: 'color .2s' }}>
+        <div style={{ fontFamily: 'var(--sans)', fontSize: 11, color: 'var(--mid)', minHeight: 20, transition: 'color .2s' }}>
           {selected
             ? <span style={{ color: 'var(--cyan)' }}>→ {PARTS.find(p => p.id === selected)?.stack}</span>
             : <span>파트를 선택하세요</span>
@@ -52,7 +52,7 @@ export default function Parts() {
               opacity: listVisible.includes(i) ? 1 : 0,
               transform: listVisible.includes(i) ? 'none' : i % 2 === 0 ? 'translateX(-24px)' : 'translateX(24px)',
             }}>
-            <span style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--dim)', width: 28, flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
+            <span style={{ fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--dim)', width: 28, flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</span>
             <div style={{
               width: selected === p.id ? 12 : 7, height: selected === p.id ? 12 : 7,
               borderRadius: '50%', background: p.color, flexShrink: 0, marginRight: 16,
@@ -66,7 +66,7 @@ export default function Parts() {
               textShadow: selected === p.id ? `0 0 20px ${p.color}60` : 'none',
             }}>{p.label}</span>
             <div style={{
-              fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--cyan)',
+              fontFamily: 'var(--sans)', fontSize: 11, color: 'var(--cyan)',
               opacity: selected === p.id ? 1 : 0,
               transform: selected === p.id ? 'none' : 'translateX(8px)',
               transition: 'all .2s',
@@ -75,7 +75,7 @@ export default function Parts() {
               borderRadius: 4, padding: '3px 10px',
               boxShadow: selected === p.id ? `0 0 12px ${p.color}40` : 'none',
             }}>{p.stack}</div>
-            <span style={{ fontFamily: 'var(--mono)', fontSize: 14, marginLeft: 16, color: selected === p.id ? 'var(--cyan)' : 'transparent', transition: 'all .2s' }}>→</span>
+            <span style={{ fontFamily: 'var(--sans)', fontSize: 14, marginLeft: 16, color: selected === p.id ? 'var(--cyan)' : 'transparent', transition: 'all .2s' }}>→</span>
           </div>
         ))}
       </div>

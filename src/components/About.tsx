@@ -42,8 +42,8 @@ export default function About() {
           }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(0,175,236,0.04)'; (e.currentTarget as HTMLElement).style.boxShadow = 'inset 0 0 40px rgba(0,175,236,0.04)'; }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'transparent'; (e.currentTarget as HTMLElement).style.boxShadow = 'none'; }}>
-            <div style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--cyan)', letterSpacing: '0.12em', marginBottom: 10, opacity: .7 }}>{s.k}</div>
-            <div style={{ fontFamily: 'var(--mono)', fontSize: 'clamp(32px,5vw,56px)', fontWeight: 500, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em', marginBottom: 6, textShadow: '0 0 20px rgba(0,175,236,0.2)' }}>
+            <div style={{ fontFamily: 'var(--sans)', fontSize: 9, color: 'var(--cyan)', letterSpacing: '0.12em', marginBottom: 10, opacity: .7 }}>{s.k}</div>
+            <div style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(32px,5vw,56px)', fontWeight: 500, color: '#fff', lineHeight: 1, letterSpacing: '-0.04em', marginBottom: 6, textShadow: '0 0 20px rgba(0,175,236,0.2)' }}>
               {visible ? <Counter target={s.v} /> : '0'}{s.suf}
             </div>
             <div style={{ fontSize: 12, color: 'var(--mid)', fontWeight: 500 }}>{s.label}</div>
@@ -53,7 +53,7 @@ export default function About() {
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: 'clamp(40px,6vw,96px)' }}>
         <div style={{ animation: visible ? 'slide-left .7s .1s both' : 'none' }}>
-          <div style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 20, opacity: .7 }}>01 — ABOUT</div>
+          <div style={{ fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--cyan)', letterSpacing: '0.1em', marginBottom: 20, opacity: .7 }}>01 — ABOUT</div>
           <h2 className="shimmer" style={{ fontSize: 'clamp(26px,3.5vw,38px)', fontWeight: 800, letterSpacing: '-0.025em', lineHeight: 1.2, marginBottom: 20 }}>아이디어를 서비스로.</h2>
           <p style={{ color: 'var(--mid)', lineHeight: 1.85, fontSize: 14.5, marginBottom: 14 }}>UMC(University MakeUs Challenge)는 전국 대학생 개발자, 디자이너, 기획자가 모여 실제 앱 서비스를 만드는 연합 동아리입니다.</p>
           <p style={{ color: 'var(--mid)', lineHeight: 1.85, fontSize: 14.5 }}>6개월 동안 팀을 이뤄 기획부터 배포까지. 이론이 아니라 실전입니다.</p>
@@ -64,9 +64,9 @@ export default function About() {
             <div key={i} style={{ padding: '16px 0', borderBottom: '1px solid var(--line)', display: 'flex', gap: 16, alignItems: 'flex-start', cursor: 'default', transition: 'padding .2s,background .2s' }}
             onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.paddingLeft = '12px'; el.style.background = 'rgba(0,175,236,0.05)'; }}
             onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.paddingLeft = '0'; el.style.background = 'transparent'; }}>
-              <span style={{ fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--cyan)', marginTop: 2, flexShrink: 0, opacity: .6 }}>→</span>
+              <span style={{ fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--cyan)', marginTop: 2, flexShrink: 0, opacity: .6 }}>→</span>
               <div>
-                <div style={{ fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--text)', marginBottom: 3 }}>{f.label}</div>
+                <div style={{ fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--text)', marginBottom: 3 }}>{f.label}</div>
                 <div style={{ fontSize: 13, color: 'var(--mid)' }}>{f.desc}</div>
               </div>
             </div>
