@@ -44,13 +44,13 @@ export default function Navbar() {
           boxShadow: '0 0 24px rgba(0,175,236,0.35),inset 0 1px 0 rgba(0,175,236,0.2)',
           animation: 'neon-pulse 3s ease-in-out infinite', flexShrink: 0,
         }}>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: 10, fontWeight: 500, color: 'var(--cyan)', letterSpacing: '0.06em', animation: 'flicker 9s infinite' }}>UMC</span>
+          <span style={{ fontFamily: 'var(--sans)', fontSize: 10, fontWeight: 500, color: 'var(--cyan)', letterSpacing: '0.06em', animation: 'flicker 9s infinite' }}>UMC</span>
         </div>
         <div>
-          <div style={{ fontFamily: 'var(--mono)', fontSize: 13, fontWeight: 500, color: '#fff', letterSpacing: '0.04em' }}>
+          <div style={{ fontFamily: 'var(--sans)', fontSize: 13, fontWeight: 500, color: '#fff', letterSpacing: '0.04em' }}>
             INHA <span style={{ color: 'var(--cyan)' }}>UMC</span>
           </div>
-          <div style={{ fontFamily: 'var(--mono)', fontSize: 8.5, color: 'var(--dim)', letterSpacing: '0.1em' }}>v10.0.0 · INHA UNIV</div>
+          <div style={{ fontFamily: 'var(--sans)', fontSize: 8.5, color: 'var(--dim)', letterSpacing: '0.1em' }}>v10.0.0 · INHA UNIV</div>
         </div>
       </a>
 
@@ -58,13 +58,13 @@ export default function Navbar() {
       <div className="desk" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
         {NAV.slice(0, -1).map(n => (
           <a key={n.id} href={`#${n.id}`} onClick={e => { e.preventDefault(); goTo(n.id); }}
-            style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--mid)', padding: '6px 12px', borderRadius: 5, textDecoration: 'none', transition: 'all .18s' }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 12, color: 'var(--mid)', padding: '6px 12px', borderRadius: 5, textDecoration: 'none', transition: 'all .18s' }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--text)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.04)'; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--mid)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
           >{n.l}</a>
         ))}
         <a href="#apply" onClick={e => { e.preventDefault(); goTo('apply'); }}
-          style={{ marginLeft: 12, fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '8px 18px', borderRadius: 6, textDecoration: 'none', transition: 'all .2s', boxShadow: '0 0 20px rgba(0,175,236,0.25)' }}
+          style={{ marginLeft: 12, fontFamily: 'var(--sans)', fontSize: 12, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '8px 18px', borderRadius: 6, textDecoration: 'none', transition: 'all .2s', boxShadow: '0 0 20px rgba(0,175,236,0.25)' }}
           onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 36px rgba(0,175,236,0.6)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-1px)'; }}
           onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 20px rgba(0,175,236,0.25)'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
         >모집안내</a>
@@ -87,7 +87,7 @@ export default function Navbar() {
         }}>
           {NAV.map(n => (
             <a key={n.id} href={`#${n.id}`} onClick={e => { e.preventDefault(); goTo(n.id); setOpen(false); }}
-              style={{ display: 'block', fontFamily: 'var(--mono)', fontSize: 15, color: 'var(--mid)', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid var(--line)' }}
+              style={{ display: 'block', fontFamily: 'var(--sans)', fontSize: 15, color: 'var(--mid)', padding: '12px 0', textDecoration: 'none', borderBottom: '1px solid var(--line)' }}
             >{n.l}</a>
           ))}
         </div>

@@ -31,7 +31,7 @@ export default function Hero({ recruiting }: HeroProps) {
         opacity: visible ? 0.5 : 0, transition: 'opacity 1s .9s', pointerEvents: 'none', zIndex: 4,
       }}>
         {[{ s: 'SYS', v: 'ONLINE' }, { s: 'NET', v: 'ACTIVE' }, { s: 'GEN', v: '10TH' }].map(x => (
-          <div key={x.s} style={{ fontFamily: 'var(--mono)', fontSize: 8, letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: 6 }}>
+          <div key={x.s} style={{ fontFamily: 'var(--sans)', fontSize: 8, letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: 6 }}>
             <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#3DBA6B', boxShadow: '0 0 8px #3DBA6B', animation: 'warn-blink 3s infinite' }} />
             <span style={{ color: 'var(--dim)' }}>{x.s}</span>
             <span style={{ color: 'var(--cyan)', opacity: .7 }}>{x.v}</span>
@@ -63,12 +63,12 @@ export default function Hero({ recruiting }: HeroProps) {
         {recruiting ? (
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(0,91,172,0.12)', border: '1px solid rgba(0,175,236,0.2)', borderRadius: 24, padding: '6px 14px', marginBottom: 32 }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#3DBA6B', boxShadow: '0 0 10px #3DBA6B,0 0 20px #3DBA6B' }} />
-            <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, color: '#8AB4E8', letterSpacing: '0.08em' }}>10TH GENERATION — RECRUITING NOW</span>
+            <span style={{ fontFamily: 'var(--sans)', fontSize: 10.5, color: '#8AB4E8', letterSpacing: '0.08em' }}>10TH GENERATION — RECRUITING NOW</span>
           </div>
         ) : (
           <div className="badge-off" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: 'rgba(60,60,80,0.18)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 24, padding: '6px 14px', marginBottom: 32 }}>
             <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--dim)' }} />
-            <span style={{ fontFamily: 'var(--mono)', fontSize: 10.5, color: 'var(--mid)', letterSpacing: '0.08em' }}>10TH GENERATION — 모집 준비 중</span>
+            <span style={{ fontFamily: 'var(--sans)', fontSize: 10.5, color: 'var(--mid)', letterSpacing: '0.08em' }}>10TH GENERATION — 모집 준비 중</span>
           </div>
         )}
 
@@ -76,31 +76,31 @@ export default function Hero({ recruiting }: HeroProps) {
           <span className="glitch rgb-hover" data-text="INHA" style={{ display: 'block', fontSize: 'clamp(64px,12vw,148px)', fontWeight: 900 }}>INHA</span>
           <span style={{ display: 'flex', alignItems: 'flex-end', gap: '0.1em' }}>
             <span className="glitch" data-text="UMC" style={{ display: 'block', fontSize: 'clamp(64px,12vw,148px)', fontWeight: 900, color: 'transparent', WebkitTextStroke: '1.5px var(--cyan)', textShadow: '0 0 60px rgba(0,175,236,0.25),0 0 120px rgba(0,175,236,0.1)' }}>UMC</span>
-            <span style={{ display: 'block', fontSize: 'clamp(18px,3vw,40px)', fontWeight: 300, fontFamily: 'var(--mono)', color: 'var(--mid)', letterSpacing: '-0.01em', paddingBottom: '0.14em' }}>// 10th</span>
+            <span style={{ display: 'block', fontSize: 'clamp(18px,3vw,40px)', fontWeight: 300, fontFamily: 'var(--sans)', color: 'var(--mid)', letterSpacing: '-0.01em', paddingBottom: '0.14em' }}>// 10th</span>
           </span>
         </h1>
 
         <div style={{ marginBottom: 44, minHeight: 28 }}>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: 'clamp(13px,1.8vw,17px)', color: 'var(--mid)' }}>→&nbsp;</span>
-          <span style={{ fontFamily: 'var(--mono)', fontSize: 'clamp(13px,1.8vw,17px)', color: 'var(--text)' }}>{typed}</span>
+          <span style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(13px,1.8vw,17px)', color: 'var(--mid)' }}>→&nbsp;</span>
+          <span style={{ fontFamily: 'var(--sans)', fontSize: 'clamp(13px,1.8vw,17px)', color: 'var(--text)' }}>{typed}</span>
           <span className="cursor" />
         </div>
 
         <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
           {recruiting ? (
             <a href="#apply" onClick={e => { e.preventDefault(); goTo('apply'); }} className="cta-pulse"
-              style={{ fontFamily: 'var(--mono)', fontSize: 13, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '13px 28px', borderRadius: 7, textDecoration: 'none', transition: 'all .2s', boxShadow: '0 0 28px rgba(0,175,236,0.4)', display: 'inline-block' }}
+              style={{ fontFamily: 'var(--sans)', fontSize: 13, fontWeight: 500, color: 'var(--bg)', background: 'var(--cyan)', padding: '13px 28px', borderRadius: 7, textDecoration: 'none', transition: 'all .2s', boxShadow: '0 0 28px rgba(0,175,236,0.4)', display: 'inline-block' }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 50px rgba(0,175,236,0.7)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
               onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 0 28px rgba(0,175,236,0.4)'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
             >10기 모집안내 →</a>
           ) : (
-            <div style={{ fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--mid)', padding: '13px 28px', borderRadius: 7, border: '1px dashed rgba(255,255,255,0.1)', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--mid)', padding: '13px 28px', borderRadius: 7, border: '1px dashed rgba(255,255,255,0.1)', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--dim)', display: 'inline-block' }} />
               모집 일정 공개 예정
             </div>
           )}
           <a href="#about" onClick={e => { e.preventDefault(); goTo('about'); }}
-            style={{ fontFamily: 'var(--mono)', fontSize: 13, color: 'var(--mid)', padding: '13px 28px', borderRadius: 7, textDecoration: 'none', border: '1px solid var(--line2)', transition: 'all .2s', display: 'inline-block' }}
+            style={{ fontFamily: 'var(--sans)', fontSize: 13, color: 'var(--mid)', padding: '13px 28px', borderRadius: 7, textDecoration: 'none', border: '1px solid var(--line2)', transition: 'all .2s', display: 'inline-block' }}
             onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--text)'; (e.currentTarget as HTMLElement).style.background = 'rgba(255,255,255,0.03)'; }}
             onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--mid)'; (e.currentTarget as HTMLElement).style.background = 'transparent'; }}
           >동아리 소개</a>
@@ -110,7 +110,7 @@ export default function Hero({ recruiting }: HeroProps) {
       {/* Coordinates */}
       <div style={{
         position: 'absolute', bottom: 36, right: 'clamp(16px,4vw,56px)',
-        fontFamily: 'var(--mono)', fontSize: 10, color: 'var(--dim)',
+        fontFamily: 'var(--sans)', fontSize: 10, color: 'var(--dim)',
         opacity: visible ? 1 : 0, transition: 'opacity 1s .6s',
         display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 4,
       }}>
@@ -121,7 +121,7 @@ export default function Hero({ recruiting }: HeroProps) {
 
       {/* Ticker */}
       <div style={{ position: 'absolute', bottom: 60, left: 0, right: 0, borderTop: '1px solid rgba(0,175,236,0.07)', overflow: 'hidden', pointerEvents: 'none', zIndex: 4 }}>
-        <div className="ticker-inner" style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'rgba(0,175,236,0.3)', letterSpacing: '0.14em', padding: '5px 0' }}>
+        <div className="ticker-inner" style={{ fontFamily: 'var(--sans)', fontSize: 9, color: 'rgba(0,175,236,0.3)', letterSpacing: '0.14em', padding: '5px 0' }}>
           {'INHA UMC · 10TH GENERATION · PM · DESIGN · WEB · ANDROID · IOS · SPRING · NODE · UNIVERSITY MAKEUS CHALLENGE · INHA UNIV · 인하대학교 앱 개발 동아리 · '.repeat(2)}
         </div>
       </div>
@@ -133,7 +133,7 @@ export default function Hero({ recruiting }: HeroProps) {
         opacity: visible ? 0.5 : 0, transition: 'opacity 1s .7s',
       }}>
         <div style={{ width: 1, height: 44, background: 'linear-gradient(to bottom,transparent,var(--cyan))' }} />
-        <span style={{ fontFamily: 'var(--mono)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--mid)', writingMode: 'vertical-rl' }}>SCROLL</span>
+        <span style={{ fontFamily: 'var(--sans)', fontSize: 9, letterSpacing: '0.15em', color: 'var(--mid)', writingMode: 'vertical-rl' }}>SCROLL</span>
       </div>
     </section>
   );
