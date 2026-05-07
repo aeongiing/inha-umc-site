@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'INHA UMC — 인하대학교 앱 개발 동아리',
   description: '인하대학교 UMC(University MakeUs Challenge) 앱 개발 동아리 공식 홈페이지. iOS, Android, Web 개발을 함께합니다.',
   keywords: ['인하대학교', 'UMC', '앱개발', '동아리', '인하대 동아리', 'University MakeUs Challenge'],
+  verification: {
+    google: 'miv9rJEOEMt1xSazA2C-GrnacSk9Pp_oaiT5V2W_zvA',
+  },
   openGraph: {
     title: 'INHA UMC — 인하대학교 앱 개발 동아리',
     description: '인하대학교 UMC(University MakeUs Challenge) 앱 개발 동아리 공식 홈페이지',
